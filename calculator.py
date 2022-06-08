@@ -13,7 +13,7 @@
 #
 # Обратите внимание, что на вход программе приходят вещественные числа.
 
-print('Введите чила:')
+print('Введите числа:')
 a = float(input())
 b = float(input())
 print('''
@@ -42,3 +42,23 @@ else:
         print(a * b)
     elif operation == 'pow':
         print(a ** b)
+
+print('Введите числа:')
+a = int(input())
+b = int(input())
+print('Поддерживаемые операции: +, -, /, *')
+operation = input()
+
+if operation == '+' or operation == '-' or operation == '*' or operation == '/':
+    if operation == '/' and b == 0:
+        print('На ноль делить нельзя!')
+    elif operation == '+':
+        print(a + b)
+    elif operation == '-':
+        print(a - b)
+    elif operation == '*':
+        print(a * b)
+    else:
+        print(a / b)
+else:
+    print('Неверная операция')
